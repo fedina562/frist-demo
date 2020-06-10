@@ -15,6 +15,7 @@ public class FreemarkerController {
 	
 	@RequestMapping("/index")
     public String index(ModelMap map) {
+	    //ModelMap类似SpringMVC的ModelAndView
         map.addAttribute("resource", resource);
         return "freemarker/index";
     }
