@@ -23,4 +23,15 @@
     <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
     <result column="regist_time" property="registTime" jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <!-- 查询简单的用户信息 -->
+  <select id="queryUserSimplyInfoById" resultType="com.example.fristdemo.pojo.SysUser"
+          parameterType="java.lang.String" >
+	    select
+	    	*
+	    from
+	    	sys_user
+	    where
+	    	id = #{id,jdbcType=VARCHAR}
+	</select>
 </mapper>
