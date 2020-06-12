@@ -3,6 +3,7 @@ package com.example.fristdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
@@ -10,6 +11,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan(basePackages = "com.example.fristdemo.mapper")
 //扫描 所有需要的包, 包含一些自用的工具类包 所在的路径
 @ComponentScan(basePackages= {"com.example.fristdemo", "org.n3r.idworker"})
+//开启定时任务
+@EnableScheduling
 public class FristDemoApplication {
 
 	public static void main(String[] args) {
